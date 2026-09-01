@@ -1,0 +1,3300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Velora Wedfilms | Wedding Photography & Cinematography Kerala</title>
+<meta name="description" content="Velora Wedfilms is a premium wedding photography and cinematography studio based in Trivandrum, Kerala, serving weddings across Kerala and Tamil Nadu. We capture timeless photographs and cinematic wedding films that make your moments memorable.">
+<meta name="keywords" content="Wedding photography Kerala, Wedding videography Kerala, Wedding photographers Trivandrum, Wedding cinematography Trivandrum, Wedding photographers Tamil Nadu, Wedding videographers Kerala, Pre wedding photography Kerala, Wedding films Kerala">
+<meta name="author" content="Velora Wedfilms">
+<meta property="og:title" content="Velora Wedfilms | Wedding Photography & Cinematography Kerala">
+<meta property="og:description" content="Premium wedding photography & cinematography studio in Trivandrum, Kerala. Make your moment memorable.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://z-cdn-media.chatglm.cn/files/18ea3b89-1f5b-4431-b46d-55e8121039f1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root{
+  --charcoal:#0d0d0d;
+  --charcoal-2:#141414;
+  --charcoal-3:#1c1c1c;
+  --charcoal-4:#262626;
+  --ivory:#f5f0e6;
+  --ivory-light:#faf7f0;
+  --ivory-soft:#ebe4d5;
+  --champagne:#d4b886;
+  --champagne-light:#e8d9b5;
+  --gold:#b8956a;
+  --gold-soft:#c9a876;
+  --beige:#e8e0d3;
+  --white:#ffffff;
+  --text-dark:#1a1a1a;
+  --text-light:#f5f0e6;
+  --text-muted:#8a8580;
+  --text-muted-light:#a8a39c;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--charcoal);
+  color:var(--ivory);
+  overflow-x:hidden;
+  line-height:1.6;
+  font-weight:300;
+}
+::selection{background:var(--gold);color:var(--charcoal)}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--charcoal)}
+::-webkit-scrollbar-thumb{background:var(--charcoal-4)}
+::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+
+/* Typography */
+.serif{font-family:'Cormorant Garamond',serif}
+.label{
+  font-family:'Inter',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:0.3em;
+  font-size:0.7rem;
+  font-weight:500;
+  color:var(--gold);
+}
+.label-light{color:var(--gold-soft)}
+
+h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.05;letter-spacing:-0.01em}
+
+/* Grain texture */
+.grain::after{
+  content:'';
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:9998;
+  opacity:0.04;
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* === LOADER === */
+.loader{
+  position:fixed;
+  inset:0;
+  background:var(--charcoal);
+  z-index:10000;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  transition:opacity 0.8s ease, visibility 0.8s ease;
+}
+.loader.hidden{opacity:0;visibility:hidden}
+.loader-flower{
+  width:42px;
+  height:42px;
+  margin-bottom:2.5rem;
+  opacity:0;
+  animation:loaderFade 0.8s 0.2s forwards;
+}
+.loader-flower svg{width:100%;height:100%;animation:loaderRotate 3s linear infinite}
+@keyframes loaderRotate{to{transform:rotate(360deg)}}
+.loader-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.2rem,5vw,3.4rem);
+  font-weight:400;
+  letter-spacing:0.18em;
+  color:var(--ivory);
+  overflow:hidden;
+}
+.loader-title span{
+  display:inline-block;
+  opacity:0;
+  transform:translateY(20px);
+  animation:loaderLetter 0.6s forwards;
+}
+@keyframes loaderLetter{to{opacity:1;transform:translateY(0)}}
+.loader-subtitle{
+  font-size:0.7rem;
+  letter-spacing:0.5em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-top:1.2rem;
+  opacity:0;
+  animation:loaderFade 0.8s 1.4s forwards;
+}
+.loader-line{
+  width:0;
+  height:1px;
+  background:var(--gold);
+  margin-top:1.8rem;
+  animation:loaderLine 1s 1.6s forwards;
+}
+@keyframes loaderLine{to{width:140px}}
+@keyframes loaderFade{to{opacity:1}}
+
+/* === CUSTOM CURSOR === */
+.cursor-dot,.cursor-ring{
+  position:fixed;
+  top:0;left:0;
+  pointer-events:none;
+  z-index:9999;
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  mix-blend-mode:difference;
+}
+.cursor-dot{
+  width:6px;height:6px;
+  background:var(--champagne);
+  transition:transform 0.15s ease;
+}
+.cursor-ring{
+  width:36px;height:36px;
+  border:1px solid var(--champagne);
+  opacity:0.5;
+  transition:transform 0.25s ease, width 0.3s ease, height 0.3s ease;
+}
+.cursor-ring.hovering{
+  width:60px;height:60px;
+  background:rgba(212,184,134,0.05);
+}
+@media (hover:none),(pointer:coarse){
+  .cursor-dot,.cursor-ring{display:none}
+}
+
+/* === NAVIGATION === */
+.nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  z-index:1000;
+  padding:1.5rem 2.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  transition:all 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.nav.scrolled{
+  background:rgba(13,13,13,0.85);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  padding:1rem 2.5rem;
+  border-bottom:1px solid rgba(184,149,106,0.15);
+}
+.nav-logo{
+  display:flex;
+  align-items:center;
+  gap:0.75rem;
+  cursor:pointer;
+  text-decoration:none;
+}
+.nav-logo-flower{
+  width:28px;height:28px;
+  transition:transform 0.6s ease;
+}
+.nav-logo:hover .nav-logo-flower{transform:rotate(180deg)}
+.nav-logo-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+.nav-logo-text .name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;
+  font-weight:500;
+  letter-spacing:0.08em;
+  color:var(--ivory);
+}
+.nav-logo-text .tag{
+  font-size:0.55rem;
+  letter-spacing:0.4em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-top:2px;
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:2.5rem;
+  list-style:none;
+}
+.nav-link{
+  font-size:0.78rem;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--ivory);
+  text-decoration:none;
+  position:relative;
+  font-weight:400;
+  transition:color 0.3s ease;
+  cursor:pointer;
+}
+.nav-link::after{
+  content:'';
+  position:absolute;
+  bottom:-6px;left:0;
+  width:0;height:1px;
+  background:var(--gold);
+  transition:width 0.4s ease;
+}
+.nav-link:hover{color:var(--champagne)}
+.nav-link:hover::after{width:100%}
+.nav-cta{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+.btn-outline{
+  padding:0.7rem 1.5rem;
+  border:1px solid rgba(245,240,230,0.3);
+  color:var(--ivory);
+  font-size:0.7rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  background:transparent;
+  cursor:pointer;
+  transition:all 0.4s ease;
+  text-decoration:none;
+  display:inline-block;
+}
+.btn-outline:hover{
+  border-color:var(--gold);
+  color:var(--champagne);
+  background:rgba(184,149,106,0.05);
+}
+.btn-filled{
+  padding:0.7rem 1.6rem;
+  background:var(--gold);
+  color:var(--charcoal);
+  font-size:0.7rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  font-weight:500;
+  border:none;
+  cursor:pointer;
+  transition:all 0.4s ease;
+  text-decoration:none;
+  display:inline-block;
+}
+.btn-filled:hover{
+  background:var(--champagne);
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px -10px rgba(184,149,106,0.5);
+}
+
+/* Hamburger */
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:5px;
+  cursor:pointer;
+  padding:8px;
+  z-index:1001;
+}
+.hamburger span{
+  width:24px;height:1.5px;
+  background:var(--ivory);
+  transition:all 0.4s ease;
+}
+.hamburger.active span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+.mobile-menu{
+  position:fixed;
+  inset:0;
+  background:var(--charcoal);
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2rem;
+  opacity:0;
+  visibility:hidden;
+  transition:all 0.5s ease;
+}
+.mobile-menu.active{opacity:1;visibility:visible}
+.mobile-menu a{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;
+  color:var(--ivory);
+  text-decoration:none;
+  letter-spacing:0.05em;
+  transition:color 0.3s ease;
+}
+.mobile-menu a:hover{color:var(--champagne)}
+.mobile-menu-cta{
+  margin-top:2rem;
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  align-items:center;
+}
+
+/* === HERO === */
+.hero{
+  position:relative;
+  height:100vh;
+  min-height:680px;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+.hero-bg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.08);
+  animation:heroZoom 18s ease-out forwards;
+}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(13,13,13,0.55) 0%,rgba(13,13,13,0.25) 35%,rgba(13,13,13,0.5) 70%,rgba(13,13,13,0.92) 100%),
+    linear-gradient(90deg,rgba(13,13,13,0.4) 0%,transparent 50%);
+  z-index:1;
+}
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  padding:0 2.5rem 5rem;
+  max-width:1600px;
+  margin:0 auto;
+}
+.hero-label{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:2rem;
+  opacity:0;
+  animation:fadeUp 1s 0.3s forwards;
+}
+.hero-label-line{
+  width:50px;height:1px;
+  background:var(--gold);
+}
+.hero-label-text{
+  font-size:0.7rem;
+  letter-spacing:0.4em;
+  text-transform:uppercase;
+  color:var(--champagne);
+}
+.hero h1{
+  font-size:clamp(3rem,8.5vw,7.5rem);
+  font-weight:300;
+  color:var(--ivory);
+  margin-bottom:2rem;
+  letter-spacing:-0.02em;
+  line-height:0.95;
+}
+.hero h1 .line{
+  display:block;
+  overflow:hidden;
+}
+.hero h1 .line span{
+  display:inline-block;
+  transform:translateY(110%);
+  animation:heroLineUp 1.2s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+.hero h1 .line:nth-child(1) span{animation-delay:0.5s}
+.hero h1 .line:nth-child(2) span{animation-delay:0.7s}
+.hero h1 .line:nth-child(3) span{animation-delay:0.9s}
+.hero h1 em{
+  font-style:italic;
+  color:var(--champagne);
+  font-weight:400;
+}
+@keyframes heroLineUp{to{transform:translateY(0)}}
+.hero-desc{
+  max-width:540px;
+  font-size:1.05rem;
+  color:rgba(245,240,230,0.78);
+  margin-bottom:2.5rem;
+  font-weight:300;
+  opacity:0;
+  animation:fadeUp 1s 1.2s forwards;
+}
+.hero-meta{
+  display:flex;
+  align-items:center;
+  gap:1.5rem;
+  margin-bottom:2.5rem;
+  opacity:0;
+  animation:fadeUp 1s 1.4s forwards;
+}
+.hero-meta .brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;
+  letter-spacing:0.15em;
+  color:var(--ivory);
+}
+.hero-meta .dot{
+  width:4px;height:4px;
+  background:var(--gold);
+  border-radius:50%;
+}
+.hero-meta .place{
+  font-size:0.75rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:var(--champagne);
+}
+.hero-buttons{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+  opacity:0;
+  animation:fadeUp 1s 1.6s forwards;
+}
+.btn-large{padding:1rem 2rem;font-size:0.75rem}
+.btn-outline-light{
+  padding:1rem 2rem;
+  border:1px solid rgba(245,240,230,0.35);
+  color:var(--ivory);
+  font-size:0.75rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  background:transparent;
+  cursor:pointer;
+  transition:all 0.4s ease;
+  text-decoration:none;
+  display:inline-block;
+}
+.btn-outline-light:hover{
+  border-color:var(--champagne);
+  background:rgba(245,240,230,0.05);
+  color:var(--champagne);
+}
+.scroll-indicator{
+  position:absolute;
+  bottom:2rem;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0.8rem;
+  opacity:0;
+  animation:fadeUp 1s 2s forwards;
+}
+.scroll-indicator-text{
+  font-size:0.6rem;
+  letter-spacing:0.4em;
+  text-transform:uppercase;
+  color:var(--champagne);
+  writing-mode:vertical-rl;
+}
+.scroll-line{
+  width:1px;height:50px;
+  background:linear-gradient(180deg,var(--gold) 0%,transparent 100%);
+  position:relative;
+  overflow:hidden;
+}
+.scroll-line::after{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:30%;
+  background:var(--champagne);
+  animation:scrollDown 2s ease-in-out infinite;
+}
+@keyframes scrollDown{
+  0%{transform:translateY(-100%)}
+  100%{transform:translateY(400%)}
+}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* === REVEAL ANIMATIONS === */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity 1s cubic-bezier(0.16,1,0.3,1), transform 1s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:0.15s}
+.reveal-delay-2{transition-delay:0.3s}
+.reveal-delay-3{transition-delay:0.45s}
+.reveal-delay-4{transition-delay:0.6s}
+
+.reveal-img{
+  overflow:hidden;
+  position:relative;
+}
+.reveal-img img{
+  transform:scale(1.15);
+  transition:transform 1.4s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-img::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:var(--charcoal);
+  z-index:2;
+  transform-origin:right;
+  transition:transform 1.2s cubic-bezier(0.76,0,0.24,1);
+}
+.reveal-img.in-view::before{transform:scaleX(0)}
+.reveal-img.in-view img{transform:scale(1)}
+
+/* === SECTION COMMON === */
+section{position:relative}
+.section-pad{padding:8rem 2.5rem}
+.container{max-width:1400px;margin:0 auto}
+.container-narrow{max-width:980px;margin:0 auto}
+.container-wide{max-width:1600px;margin:0 auto}
+
+.section-header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  margin-bottom:5rem;
+}
+.section-header .label{margin-bottom:1.5rem}
+.section-header h2{
+  font-size:clamp(2.2rem,5vw,4rem);
+  font-weight:300;
+  line-height:1.1;
+  max-width:900px;
+}
+.section-header h2 em{font-style:italic;color:var(--champagne)}
+.section-header .sub{
+  margin-top:1.5rem;
+  font-size:1rem;
+  color:var(--text-muted-light);
+  max-width:600px;
+  font-weight:300;
+  font-style:italic;
+}
+
+.divider-gold{
+  width:60px;
+  height:1px;
+  background:var(--gold);
+  margin:1.5rem auto;
+}
+
+/* === BRAND INTRO === */
+.brand-intro{
+  background:var(--ivory);
+  color:var(--text-dark);
+  padding:8rem 2.5rem;
+}
+.brand-intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:5rem;
+  align-items:center;
+  max-width:1400px;
+  margin:0 auto;
+}
+.brand-intro-left .label{color:var(--gold);margin-bottom:1.5rem;display:block}
+.brand-intro-left h2{
+  font-size:clamp(2rem,4vw,3.5rem);
+  font-weight:300;
+  line-height:1.15;
+  color:var(--text-dark);
+  margin-bottom:2rem;
+}
+.brand-intro-left h2 em{font-style:italic;color:var(--gold)}
+.brand-intro-left p{
+  font-size:1rem;
+  color:#5a5650;
+  margin-bottom:1.5rem;
+  font-weight:300;
+  line-height:1.8;
+}
+.brand-intro-logo{
+  margin-top:3rem;
+  padding-top:3rem;
+  border-top:1px solid rgba(0,0,0,0.08);
+  display:flex;
+  justify-content:center;
+}
+.brand-intro-logo img{
+  max-width:220px;
+  height:auto;
+  filter:drop-shadow(0 4px 20px rgba(0,0,0,0.08));
+}
+.brand-stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0;
+  border:1px solid rgba(0,0,0,0.08);
+}
+.brand-stat{
+  padding:2.5rem 2rem;
+  border-right:1px solid rgba(0,0,0,0.08);
+  border-bottom:1px solid rgba(0,0,0,0.08);
+  background:var(--ivory-light);
+  transition:background 0.4s ease;
+}
+.brand-stat:hover{background:var(--ivory-soft)}
+.brand-stat:nth-child(2n){border-right:none}
+.brand-stat:nth-child(n+3){border-bottom:none}
+.brand-stat .label{font-size:0.6rem;letter-spacing:0.3em;color:var(--gold);margin-bottom:0.8rem;display:block}
+.brand-stat .value{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.8rem;
+  font-weight:400;
+  color:var(--text-dark);
+  line-height:1.1;
+}
+.brand-stat .desc{
+  font-size:0.8rem;
+  color:#7a7670;
+  margin-top:0.5rem;
+  font-weight:300;
+}
+
+/* === WEDDING STORY === */
+.wedding-story{
+  position:relative;
+  background:var(--charcoal);
+  padding:10rem 2.5rem;
+  overflow:hidden;
+}
+.wedding-story-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3rem;
+  max-width:1500px;
+  margin:0 auto;
+  position:relative;
+}
+.story-img-wrap{
+  position:relative;
+  overflow:hidden;
+}
+.story-img-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 1.5s cubic-bezier(0.16,1,0.3,1);
+}
+.story-img-wrap:hover img{transform:scale(1.05)}
+.story-img-1{
+  aspect-ratio:3/4;
+  margin-top:4rem;
+}
+.story-img-2{
+  aspect-ratio:4/5;
+  margin-top:-2rem;
+}
+.story-text-overlay{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:5;
+  text-align:center;
+  width:90%;
+  max-width:600px;
+  pointer-events:none;
+}
+.story-text-overlay .label{
+  background:var(--charcoal);
+  padding:0.5rem 1.2rem;
+  display:inline-block;
+  margin-bottom:1.5rem;
+}
+.story-text-overlay h2{
+  font-size:clamp(1.8rem,3.5vw,3rem);
+  font-weight:300;
+  color:var(--ivory);
+  background:rgba(13,13,13,0.7);
+  backdrop-filter:blur(10px);
+  padding:2rem 2.5rem;
+  line-height:1.2;
+  border:1px solid rgba(184,149,106,0.2);
+}
+.story-text-overlay h2 em{font-style:italic;color:var(--champagne)}
+.story-caption{
+  position:absolute;
+  bottom:2rem;
+  left:2rem;
+  z-index:3;
+  background:rgba(13,13,13,0.75);
+  backdrop-filter:blur(10px);
+  padding:1rem 1.5rem;
+  border-left:2px solid var(--gold);
+  max-width:280px;
+}
+.story-caption .label{display:block;margin-bottom:0.4rem;font-size:0.6rem}
+.story-caption p{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:0.95rem;
+  color:var(--ivory);
+  line-height:1.4;
+}
+.wedding-story-quote{
+  max-width:900px;
+  margin:6rem auto 0;
+  text-align:center;
+  padding:0 2rem;
+}
+.wedding-story-quote p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.4rem,2.5vw,2rem);
+  font-style:italic;
+  font-weight:300;
+  color:var(--ivory);
+  line-height:1.5;
+  position:relative;
+  padding:2rem 0;
+}
+.wedding-story-quote p::before,
+.wedding-story-quote p::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  width:1px;
+  height:30px;
+  background:var(--gold);
+}
+.wedding-story-quote p::before{top:0}
+.wedding-story-quote p::after{bottom:0}
+
+/* === BRIDE GROOM === */
+.bride-groom{
+  background:var(--charcoal-2);
+  padding:0;
+}
+.bg-section{
+  padding:8rem 2.5rem;
+  position:relative;
+  overflow:hidden;
+}
+.bg-section.bride{background:var(--charcoal-2)}
+.bg-section.groom{
+  background:var(--charcoal);
+  border-top:1px solid rgba(184,149,106,0.1);
+}
+.bg-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
+  align-items:center;
+  max-width:1400px;
+  margin:0 auto;
+}
+.bg-grid.reverse .bg-text{order:2}
+.bg-grid.reverse .bg-images{order:1}
+.bg-text .label{margin-bottom:1.5rem;display:block}
+.bg-text h2{
+  font-size:clamp(2.5rem,5vw,4.5rem);
+  font-weight:300;
+  color:var(--ivory);
+  margin-bottom:1rem;
+  letter-spacing:0.05em;
+}
+.bg-text h2 em{font-style:italic;color:var(--champagne)}
+.bg-text .quote{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:1.4rem;
+  color:var(--ivory);
+  line-height:1.5;
+  margin-bottom:2rem;
+  font-weight:300;
+  padding-left:1.5rem;
+  border-left:2px solid var(--gold);
+}
+.bg-text .desc{
+  color:var(--text-muted-light);
+  font-size:0.95rem;
+  line-height:1.8;
+  margin-bottom:2rem;
+  font-weight:300;
+}
+.bg-text .meta-list{
+  list-style:none;
+  border-top:1px solid rgba(245,240,230,0.1);
+  padding-top:1.5rem;
+}
+.bg-text .meta-list li{
+  display:flex;
+  justify-content:space-between;
+  padding:0.8rem 0;
+  border-bottom:1px solid rgba(245,240,230,0.06);
+  font-size:0.85rem;
+}
+.bg-text .meta-list li span:first-child{
+  color:var(--text-muted-light);
+  text-transform:uppercase;
+  letter-spacing:0.15em;
+  font-size:0.7rem;
+}
+.bg-text .meta-list li span:last-child{
+  color:var(--champagne);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;
+}
+.bg-images{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+  position:relative;
+}
+.bg-img-main{
+  aspect-ratio:3/4;
+  overflow:hidden;
+  position:relative;
+}
+.bg-img-main img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 1.5s ease;
+}
+.bg-img-main:hover img{transform:scale(1.05)}
+.bg-img-secondary{
+  aspect-ratio:3/4;
+  overflow:hidden;
+  margin-top:3rem;
+  position:relative;
+}
+.bg-img-secondary img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 1.5s ease;
+}
+.bg-img-secondary:hover img{transform:scale(1.05)}
+.bg-img-label{
+  position:absolute;
+  bottom:1rem;
+  left:1rem;
+  background:rgba(13,13,13,0.8);
+  backdrop-filter:blur(8px);
+  padding:0.4rem 0.8rem;
+  font-size:0.6rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:var(--champagne);
+  z-index:2;
+}
+
+/* === SERVICES === */
+.services{
+  background:var(--ivory);
+  color:var(--text-dark);
+  padding:8rem 2.5rem;
+}
+.services .section-header h2{color:var(--text-dark)}
+.services .section-header h2 em{color:var(--gold)}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1.5rem;
+  max-width:1400px;
+  margin:0 auto;
+}
+.service-card{
+  padding:3rem 2rem;
+  background:var(--ivory-light);
+  border:1px solid rgba(0,0,0,0.06);
+  transition:all 0.5s cubic-bezier(0.16,1,0.3,1);
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+.service-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  width:100%;height:2px;
+  background:var(--gold);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 0.6s ease;
+}
+.service-card:hover{
+  background:var(--charcoal);
+  color:var(--ivory);
+  transform:translateY(-8px);
+  border-color:transparent;
+}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card:hover .service-num{color:var(--champagne)}
+.service-card:hover .service-desc{color:var(--text-muted-light)}
+.service-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:0.9rem;
+  color:var(--gold);
+  letter-spacing:0.2em;
+  margin-bottom:1.5rem;
+  transition:color 0.4s ease;
+}
+.service-icon{
+  width:48px;height:48px;
+  margin-bottom:1.5rem;
+  color:var(--gold);
+}
+.service-card h3{
+  font-size:1.6rem;
+  font-weight:400;
+  margin-bottom:1rem;
+  letter-spacing:0.02em;
+}
+.service-desc{
+  font-size:0.9rem;
+  color:#6a6660;
+  line-height:1.7;
+  font-weight:300;
+  transition:color 0.4s ease;
+}
+
+/* === PACKAGES === */
+.packages{
+  background:var(--charcoal);
+  padding:8rem 2.5rem;
+  position:relative;
+  overflow:hidden;
+}
+.packages::before{
+  content:'';
+  position:absolute;
+  top:0;left:50%;
+  transform:translateX(-50%);
+  width:1px;height:80px;
+  background:linear-gradient(180deg,transparent,var(--gold));
+}
+.packages-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+  max-width:1500px;
+  margin:0 auto;
+}
+.pkg-card{
+  background:var(--charcoal-2);
+  border:1px solid rgba(184,149,106,0.15);
+  padding:3rem 2rem;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  transition:all 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.pkg-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--gold);
+  box-shadow:0 20px 50px -20px rgba(184,149,106,0.3);
+}
+.pkg-card.featured{
+  background:linear-gradient(180deg,var(--charcoal-3) 0%,var(--charcoal-2) 100%);
+  border-color:var(--gold);
+  position:relative;
+}
+.pkg-card.featured::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(184,149,106,0.05) 0%,transparent 50%);
+  pointer-events:none;
+}
+.pkg-card.premium-plus{
+  background:linear-gradient(180deg,#1a1a1a 0%,#0d0d0d 100%);
+  border:1px solid var(--gold);
+  position:relative;
+}
+.pkg-card.premium-plus::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(184,149,106,0.12) 0%,transparent 60%);
+  pointer-events:none;
+}
+.pkg-badge{
+  position:absolute;
+  top:-12px;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--gold);
+  color:var(--charcoal);
+  padding:0.4rem 1rem;
+  font-size:0.6rem;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  font-weight:600;
+  white-space:nowrap;
+}
+.pkg-badge.luxury{
+  background:linear-gradient(90deg,var(--gold-soft),var(--champagne),var(--gold-soft));
+  color:var(--charcoal);
+}
+.pkg-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.4rem;
+  font-weight:400;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--champagne);
+  text-align:center;
+  margin-bottom:0.5rem;
+  position:relative;
+  z-index:2;
+}
+.pkg-tagline{
+  text-align:center;
+  font-size:0.7rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:1.5rem;
+  position:relative;
+  z-index:2;
+}
+.pkg-price{
+  text-align:center;
+  margin-bottom:2rem;
+  position:relative;
+  z-index:2;
+  padding:1.5rem 0;
+  border-top:1px solid rgba(184,149,106,0.15);
+  border-bottom:1px solid rgba(184,149,106,0.15);
+}
+.pkg-price .currency{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;
+  color:var(--champagne);
+  vertical-align:top;
+  margin-right:0.2rem;
+}
+.pkg-price .amount{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.8rem;
+  font-weight:400;
+  color:var(--ivory);
+  line-height:1;
+}
+.pkg-features{
+  list-style:none;
+  flex:1;
+  margin-bottom:2rem;
+  position:relative;
+  z-index:2;
+}
+.pkg-features li{
+  padding:0.7rem 0;
+  font-size:0.82rem;
+  color:var(--text-muted-light);
+  border-bottom:1px solid rgba(245,240,230,0.06);
+  display:flex;
+  align-items:center;
+  gap:0.7rem;
+  font-weight:300;
+}
+.pkg-features li::before{
+  content:'';
+  width:4px;height:4px;
+  background:var(--gold);
+  border-radius:50%;
+  flex-shrink:0;
+}
+.pkg-btn{
+  width:100%;
+  padding:0.9rem;
+  background:transparent;
+  border:1px solid var(--gold);
+  color:var(--champagne);
+  font-size:0.7rem;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all 0.4s ease;
+  position:relative;
+  z-index:2;
+  font-family:inherit;
+}
+.pkg-btn:hover{
+  background:var(--gold);
+  color:var(--charcoal);
+}
+.pkg-card.premium-plus .pkg-btn{
+  background:var(--gold);
+  color:var(--charcoal);
+}
+.pkg-card.premium-plus .pkg-btn:hover{
+  background:var(--champagne);
+}
+
+/* === ADDITIONAL SERVICES === */
+.additional{
+  background:var(--ivory);
+  color:var(--text-dark);
+  padding:8rem 2.5rem;
+}
+.additional .section-header h2{color:var(--text-dark)}
+.additional .section-header h2 em{color:var(--gold)}
+.add-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+  max-width:1400px;
+  margin:0 auto;
+}
+.add-card{
+  padding:2.5rem 2rem;
+  background:var(--ivory-light);
+  border:1px solid rgba(0,0,0,0.06);
+  transition:all 0.5s ease;
+  position:relative;
+  overflow:hidden;
+}
+.add-card:hover{
+  background:var(--charcoal);
+  color:var(--ivory);
+  border-color:var(--gold);
+  transform:translateY(-5px);
+}
+.add-card:hover .add-desc{color:var(--text-muted-light)}
+.add-card.featured-ai{
+  grid-column:span 1;
+  background:linear-gradient(135deg,var(--charcoal) 0%,var(--charcoal-3) 100%);
+  color:var(--ivory);
+  border:1px solid var(--gold);
+  position:relative;
+}
+.add-card.featured-ai::before{
+  content:'';
+  position:absolute;
+  top:0;right:0;
+  width:80px;height:80px;
+  background:radial-gradient(circle at top right,rgba(184,149,106,0.3) 0%,transparent 70%);
+}
+.add-card.featured-ai .add-desc{color:var(--text-muted-light)}
+.add-card.featured-ai:hover{
+  background:linear-gradient(135deg,var(--charcoal-3) 0%,var(--charcoal) 100%);
+}
+.add-icon{
+  width:42px;height:42px;
+  margin-bottom:1.5rem;
+  color:var(--gold);
+}
+.add-card h3{
+  font-size:1.4rem;
+  font-weight:400;
+  margin-bottom:0.8rem;
+  letter-spacing:0.02em;
+}
+.add-desc{
+  font-size:0.88rem;
+  color:#6a6660;
+  line-height:1.7;
+  font-weight:300;
+  transition:color 0.4s ease;
+}
+.add-tag{
+  display:inline-block;
+  margin-top:1rem;
+  font-size:0.6rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:var(--gold);
+  padding:0.3rem 0.7rem;
+  border:1px solid var(--gold);
+}
+.add-qr-demo{
+  margin-top:1.5rem;
+  padding:1rem;
+  background:rgba(245,240,230,0.05);
+  border:1px dashed rgba(184,149,106,0.4);
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+.qr-placeholder{
+  width:50px;height:50px;
+  background:var(--ivory);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.qr-placeholder i{color:var(--charcoal);font-size:1.5rem}
+.qr-text{
+  font-size:0.75rem;
+  color:var(--champagne);
+  line-height:1.4;
+}
+
+/* === WHY VELORA === */
+.why{
+  background:var(--charcoal);
+  padding:8rem 2.5rem;
+  position:relative;
+}
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:3rem 2rem;
+  max-width:1400px;
+  margin:0 auto;
+}
+.why-item{
+  padding:2rem 0;
+  border-top:1px solid rgba(184,149,106,0.15);
+  position:relative;
+}
+.why-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:0.85rem;
+  color:var(--gold);
+  letter-spacing:0.2em;
+  margin-bottom:1rem;
+}
+.why-item h3{
+  font-size:1.6rem;
+  font-weight:400;
+  color:var(--ivory);
+  margin-bottom:0.8rem;
+}
+.why-item p{
+  font-size:0.9rem;
+  color:var(--text-muted-light);
+  line-height:1.7;
+  font-weight:300;
+}
+.why-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2rem;
+  max-width:1100px;
+  margin:5rem auto 0;
+  padding-top:5rem;
+  border-top:1px solid rgba(184,149,106,0.15);
+}
+.why-stat{
+  text-align:center;
+  padding:1rem;
+}
+.why-stat .num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.5rem,5vw,4rem);
+  font-weight:300;
+  color:var(--champagne);
+  line-height:1;
+  margin-bottom:0.8rem;
+}
+.why-stat .lbl{
+  font-size:0.7rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:var(--text-muted-light);
+}
+
+/* === PORTFOLIO === */
+.portfolio{
+  background:var(--charcoal-2);
+  padding:8rem 0;
+}
+.portfolio .section-header{padding:0 2.5rem}
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:1rem;
+  max-width:1600px;
+  margin:0 auto;
+  padding:0 1rem;
+}
+.portfolio-item{
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+.portfolio-item img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 1.5s cubic-bezier(0.16,1,0.3,1);
+}
+.portfolio-item:hover img{transform:scale(1.06)}
+.portfolio-item::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 50%,rgba(13,13,13,0.6) 100%);
+  opacity:0;
+  transition:opacity 0.6s ease;
+}
+.portfolio-item:hover::after{opacity:1}
+.portfolio-caption{
+  position:absolute;
+  bottom:1.5rem;
+  left:1.5rem;
+  z-index:2;
+  opacity:0;
+  transform:translateY(20px);
+  transition:all 0.5s ease;
+}
+.portfolio-item:hover .portfolio-caption{
+  opacity:1;
+  transform:translateY(0);
+}
+.portfolio-caption .label{display:block;margin-bottom:0.4rem;font-size:0.6rem}
+.portfolio-caption h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;
+  color:var(--ivory);
+  font-weight:400;
+  font-style:italic;
+}
+.pf-1{grid-column:span 8;aspect-ratio:16/9}
+.pf-2{grid-column:span 4;aspect-ratio:3/4}
+.pf-3{grid-column:span 4;aspect-ratio:3/4}
+.pf-4{grid-column:span 4;aspect-ratio:3/4}
+.pf-5{grid-column:span 4;aspect-ratio:3/4}
+.pf-6{grid-column:span 7;aspect-ratio:16/10}
+.pf-7{grid-column:span 5;aspect-ratio:4/5}
+.portfolio-cta{
+  text-align:center;
+  margin-top:4rem;
+  padding:0 2.5rem;
+}
+
+/* === COUPLE FEATURE === */
+.couple-feature{
+  position:relative;
+  height:90vh;
+  min-height:600px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.couple-feature-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+.couple-feature-bg img{
+  width:100%;height:100%;
+  object-fit:cover;
+  animation:slowZoom 20s ease-in-out infinite alternate;
+}
+@keyframes slowZoom{
+  from{transform:scale(1)}
+  to{transform:scale(1.08)}
+}
+.couple-feature-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(13,13,13,0.5) 0%,rgba(13,13,13,0.7) 100%);
+  z-index:1;
+}
+.couple-feature-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  padding:0 2rem;
+  max-width:1000px;
+}
+.couple-feature-content .label{margin-bottom:2rem}
+.couple-feature-content h2{
+  font-size:clamp(2rem,5vw,4.5rem);
+  font-weight:300;
+  font-style:italic;
+  color:var(--ivory);
+  line-height:1.2;
+  margin-bottom:2rem;
+}
+.couple-feature-content .brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.4rem;
+  letter-spacing:0.3em;
+  color:var(--champagne);
+  text-transform:uppercase;
+}
+.couple-feature-content .divider{
+  width:50px;height:1px;
+  background:var(--gold);
+  margin:1.5rem auto;
+}
+
+/* === FUTURE VISION === */
+.future{
+  background:var(--ivory);
+  color:var(--text-dark);
+  padding:8rem 2.5rem;
+  position:relative;
+  overflow:hidden;
+}
+.future-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5rem;
+  max-width:1400px;
+  margin:0 auto;
+  align-items:center;
+}
+.future-text .label{color:var(--gold);margin-bottom:1.5rem;display:block}
+.future-text h2{
+  font-size:clamp(2rem,4vw,3.5rem);
+  font-weight:300;
+  color:var(--text-dark);
+  margin-bottom:2rem;
+  line-height:1.15;
+}
+.future-text h2 em{font-style:italic;color:var(--gold)}
+.future-text > p{
+  font-size:1.05rem;
+  color:#5a5650;
+  font-style:italic;
+  font-family:'Cormorant Garamond',serif;
+  line-height:1.6;
+  margin-bottom:2.5rem;
+  font-weight:400;
+}
+.future-list{
+  list-style:none;
+  margin-bottom:2.5rem;
+}
+.future-list li{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:1rem 0;
+  border-bottom:1px solid rgba(0,0,0,0.08);
+  font-size:0.95rem;
+}
+.future-list li .icon{
+  width:32px;height:32px;
+  background:var(--gold);
+  color:var(--ivory);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0.8rem;
+  flex-shrink:0;
+}
+.future-list li .label-text{
+  font-weight:500;
+  color:var(--text-dark);
+}
+.future-list li .desc-text{
+  color:#7a7670;
+  font-size:0.85rem;
+  margin-left:auto;
+  font-style:italic;
+  font-family:'Cormorant Garamond',serif;
+}
+.future-vision-final{
+  padding:2rem;
+  background:var(--charcoal);
+  color:var(--ivory);
+  text-align:center;
+  border:1px solid var(--gold);
+}
+.future-vision-final .small{
+  font-size:0.65rem;
+  letter-spacing:0.4em;
+  text-transform:uppercase;
+  color:var(--champagne);
+  margin-bottom:1rem;
+}
+.future-vision-final .big{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;
+  letter-spacing:0.2em;
+  color:var(--ivory);
+  font-weight:400;
+}
+.future-visual{
+  position:relative;
+  padding:3rem;
+  background:var(--ivory-light);
+  border:1px solid rgba(0,0,0,0.06);
+}
+.future-map{
+  position:relative;
+  width:100%;
+  aspect-ratio:1/1.1;
+}
+.future-map svg{
+  width:100%;height:100%;
+}
+.future-marker{
+  position:absolute;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0.3rem;
+}
+.future-marker .dot{
+  width:10px;height:10px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 0 4px rgba(184,149,106,0.2);
+}
+.future-marker.active .dot{
+  background:var(--gold);
+  animation:pulse 2s infinite;
+}
+.future-marker.future .dot{
+  background:transparent;
+  border:1px solid var(--gold);
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(184,149,106,0.5)}
+  100%{box-shadow:0 0 0 12px rgba(184,149,106,0)}
+}
+.future-marker .name{
+  font-size:0.65rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--text-dark);
+  background:var(--ivory);
+  padding:0.2rem 0.5rem;
+  white-space:nowrap;
+}
+.future-marker.future .name{color:var(--gold)}
+
+/* === INSTAGRAM === */
+.instagram{
+  background:var(--charcoal);
+  padding:8rem 2.5rem;
+  text-align:center;
+}
+.ig-handle{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.8rem,3.5vw,2.8rem);
+  font-style:italic;
+  color:var(--champagne);
+  margin:1.5rem 0 2.5rem;
+  font-weight:400;
+}
+.ig-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:0.5rem;
+  max-width:1400px;
+  margin:0 auto 3rem;
+}
+.ig-item{
+  aspect-ratio:1;
+  overflow:hidden;
+  position:relative;
+  cursor:pointer;
+}
+.ig-item img{
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 0.6s ease;
+}
+.ig-item:hover img{transform:scale(1.1)}
+.ig-item::after{
+  content:'\f16d';
+  font-family:'Font Awesome 6 Brands';
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(13,13,13,0.6);
+  color:var(--ivory);
+  font-size:1.5rem;
+  opacity:0;
+  transition:opacity 0.4s ease;
+}
+.ig-item:hover::after{opacity:1}
+
+/* === CONTACT === */
+.contact{
+  background:var(--charcoal-2);
+  padding:8rem 2.5rem;
+  position:relative;
+}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1.3fr;
+  gap:4rem;
+  max-width:1400px;
+  margin:0 auto;
+}
+.contact-info .label{margin-bottom:1.5rem;display:block}
+.contact-info h2{
+  font-size:clamp(2rem,4vw,3.2rem);
+  font-weight:300;
+  color:var(--ivory);
+  margin-bottom:1.5rem;
+  line-height:1.15;
+}
+.contact-info h2 em{font-style:italic;color:var(--champagne)}
+.contact-info .quote{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:1.2rem;
+  color:var(--text-muted-light);
+  margin-bottom:3rem;
+  line-height:1.5;
+  padding-left:1.5rem;
+  border-left:2px solid var(--gold);
+}
+.contact-methods{
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
+  margin-bottom:2rem;
+}
+.contact-method{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:1rem 0;
+  border-bottom:1px solid rgba(245,240,230,0.08);
+  text-decoration:none;
+  color:var(--ivory);
+  transition:color 0.3s ease;
+}
+.contact-method:hover{color:var(--champagne)}
+.contact-method .icon{
+  width:40px;height:40px;
+  border:1px solid var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--champagne);
+  font-size:0.9rem;
+  flex-shrink:0;
+  transition:all 0.3s ease;
+}
+.contact-method:hover .icon{
+  background:var(--gold);
+  color:var(--charcoal);
+}
+.contact-method .info{display:flex;flex-direction:column}
+.contact-method .info .lbl{
+  font-size:0.65rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:0.3rem;
+}
+.contact-method .info .val{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;
+  color:var(--ivory);
+}
+.contact-whatsapp{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:0.8rem;
+  width:100%;
+  padding:1.1rem;
+  background:#25d366;
+  color:var(--charcoal);
+  font-size:0.8rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.4s ease;
+  margin-top:1rem;
+}
+.contact-whatsapp:hover{
+  background:#22c55e;
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px -10px rgba(37,211,102,0.5);
+}
+
+.contact-form{
+  background:var(--charcoal);
+  padding:3rem;
+  border:1px solid rgba(184,149,106,0.15);
+}
+.form-selected-pkg{
+  background:linear-gradient(90deg,rgba(184,149,106,0.15) 0%,transparent 100%);
+  border-left:3px solid var(--gold);
+  padding:1rem 1.5rem;
+  margin-bottom:2rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  opacity:0;
+  max-height:0;
+  overflow:hidden;
+  transition:all 0.5s ease;
+}
+.form-selected-pkg.show{
+  opacity:1;
+  max-height:100px;
+  padding:1rem 1.5rem;
+  margin-bottom:2rem;
+}
+.form-selected-pkg .lbl{
+  font-size:0.65rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:block;
+  margin-bottom:0.3rem;
+}
+.form-selected-pkg .val{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem;
+  color:var(--ivory);
+}
+.form-selected-pkg .clear{
+  background:none;
+  border:none;
+  color:var(--text-muted);
+  cursor:pointer;
+  font-size:1.2rem;
+  padding:0.3rem;
+  transition:color 0.3s ease;
+}
+.form-selected-pkg .clear:hover{color:var(--ivory)}
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+  margin-bottom:1rem;
+}
+.form-field{display:flex;flex-direction:column}
+.form-field.full{grid-column:span 2}
+.form-field label{
+  font-size:0.65rem;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color:var(--text-muted-light);
+  margin-bottom:0.5rem;
+}
+.form-field input,
+.form-field select,
+.form-field textarea{
+  background:transparent;
+  border:none;
+  border-bottom:1px solid rgba(245,240,230,0.15);
+  padding:0.7rem 0;
+  color:var(--ivory);
+  font-family:inherit;
+  font-size:0.95rem;
+  font-weight:300;
+  transition:border-color 0.3s ease;
+  outline:none;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{
+  border-bottom-color:var(--gold);
+}
+.form-field select{
+  appearance:none;
+  -webkit-appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23b8956a' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right center;
+  padding-right:1.5rem;
+  cursor:pointer;
+}
+.form-field select option{background:var(--charcoal);color:var(--ivory)}
+.form-field textarea{
+  resize:vertical;
+  min-height:80px;
+}
+.form-checks{
+  grid-column:span 2;
+  margin-top:0.5rem;
+}
+.form-checks-label{
+  font-size:0.65rem;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color:var(--text-muted-light);
+  margin-bottom:1rem;
+}
+.form-checks-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0.7rem;
+}
+.form-check{
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+  padding:0.6rem 0.8rem;
+  background:rgba(245,240,230,0.03);
+  border:1px solid rgba(245,240,230,0.08);
+  cursor:pointer;
+  transition:all 0.3s ease;
+  font-size:0.8rem;
+  color:var(--text-muted-light);
+}
+.form-check:hover{
+  border-color:var(--gold);
+  color:var(--ivory);
+}
+.form-check input{
+  appearance:none;
+  -webkit-appearance:none;
+  width:14px;height:14px;
+  border:1px solid var(--gold);
+  background:transparent;
+  cursor:pointer;
+  position:relative;
+  flex-shrink:0;
+  margin:0;
+}
+.form-check input:checked{
+  background:var(--gold);
+}
+.form-check input:checked::after{
+  content:'\f00c';
+  font-family:'Font Awesome 6 Free';
+  font-weight:900;
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:8px;
+  color:var(--charcoal);
+}
+.form-submit{
+  width:100%;
+  padding:1.1rem;
+  background:var(--gold);
+  color:var(--charcoal);
+  border:none;
+  font-size:0.78rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  font-weight:600;
+  cursor:pointer;
+  transition:all 0.4s ease;
+  margin-top:1.5rem;
+  font-family:inherit;
+}
+.form-submit:hover{
+  background:var(--champagne);
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px -10px rgba(184,149,106,0.5);
+}
+.form-success{
+  display:none;
+  padding:1rem;
+  background:rgba(34,197,94,0.1);
+  border:1px solid #22c55e;
+  color:#22c55e;
+  text-align:center;
+  margin-top:1rem;
+  font-size:0.85rem;
+}
+.form-success.show{display:block}
+
+/* === FOOTER === */
+.footer{
+  background:var(--charcoal);
+  padding:6rem 2.5rem 2rem;
+  border-top:1px solid rgba(184,149,106,0.15);
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:3rem;
+  max-width:1400px;
+  margin:0 auto 4rem;
+}
+.footer-brand .nav-logo{margin-bottom:1.5rem}
+.footer-brand .quote{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:1.1rem;
+  color:var(--champagne);
+  margin-bottom:1.5rem;
+  line-height:1.5;
+}
+.footer-brand .social{
+  display:flex;
+  gap:1rem;
+}
+.footer-brand .social a{
+  width:38px;height:38px;
+  border:1px solid rgba(245,240,230,0.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--ivory);
+  text-decoration:none;
+  transition:all 0.3s ease;
+}
+.footer-brand .social a:hover{
+  border-color:var(--gold);
+  color:var(--champagne);
+  background:rgba(184,149,106,0.1);
+}
+.footer-col h4{
+  font-family:'Inter',sans-serif;
+  font-size:0.7rem;
+  letter-spacing:0.3em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:1.5rem;
+  font-weight:500;
+}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:0.8rem}
+.footer-col ul li a{
+  color:var(--text-muted-light);
+  text-decoration:none;
+  font-size:0.9rem;
+  font-weight:300;
+  transition:color 0.3s ease;
+  cursor:pointer;
+}
+.footer-col ul li a:hover{color:var(--champagne)}
+.footer-col p{
+  color:var(--text-muted-light);
+  font-size:0.9rem;
+  line-height:1.7;
+  font-weight:300;
+}
+.footer-col p strong{
+  color:var(--ivory);
+  font-weight:400;
+  display:block;
+  margin-bottom:0.3rem;
+}
+.footer-bottom{
+  max-width:1400px;
+  margin:0 auto;
+  padding-top:2rem;
+  border-top:1px solid rgba(245,240,230,0.08);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:1rem;
+  font-size:0.78rem;
+  color:var(--text-muted);
+}
+.footer-bottom .credit{
+  font-style:italic;
+  font-family:'Cormorant Garamond',serif;
+  color:var(--champagne);
+}
+
+/* === FLOATING ACTIONS === */
+.floating-actions{
+  position:fixed;
+  bottom:1.5rem;
+  right:1.5rem;
+  z-index:900;
+  display:flex;
+  flex-direction:column;
+  gap:0.7rem;
+}
+.floating-btn{
+  width:50px;height:50px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  box-shadow:0 8px 20px -5px rgba(0,0,0,0.4);
+}
+.floating-btn.whatsapp{
+  background:#25d366;
+  color:var(--charcoal);
+}
+.floating-btn.whatsapp:hover{
+  background:#22c55e;
+  transform:scale(1.1);
+}
+.floating-btn.call{
+  background:var(--gold);
+  color:var(--charcoal);
+}
+.floating-btn.call:hover{
+  background:var(--champagne);
+  transform:scale(1.1);
+}
+
+/* === TOAST === */
+.toast{
+  position:fixed;
+  bottom:2rem;
+  left:50%;
+  transform:translateX(-50%) translateY(150%);
+  background:var(--charcoal-3);
+  color:var(--ivory);
+  padding:1rem 1.5rem;
+  border:1px solid var(--gold);
+  font-size:0.85rem;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:0.7rem;
+  transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);
+  box-shadow:0 20px 40px -10px rgba(0,0,0,0.5);
+}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.toast i{color:var(--champagne)}
+
+/* === RESPONSIVE === */
+@media (max-width:1024px){
+  .packages-grid{grid-template-columns:repeat(2,1fr)}
+  .add-grid{grid-template-columns:repeat(2,1fr)}
+  .why-grid{grid-template-columns:repeat(2,1fr)}
+  .ig-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .brand-intro-grid{grid-template-columns:1fr;gap:3rem}
+  .future-grid{grid-template-columns:1fr;gap:3rem}
+  .contact-grid{grid-template-columns:1fr;gap:3rem}
+  .pf-1{grid-column:span 12;aspect-ratio:16/9}
+  .pf-2,.pf-3,.pf-4,.pf-5{grid-column:span 6;aspect-ratio:4/5}
+  .pf-6,.pf-7{grid-column:span 12}
+}
+
+@media (max-width:768px){
+  .nav{padding:1rem 1.5rem}
+  .nav.scrolled{padding:0.8rem 1.5rem}
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .section-pad{padding:5rem 1.5rem}
+  .brand-intro,.wedding-story,.services,.packages,.additional,.why,.contact,.instagram,.future{padding:5rem 1.5rem}
+  .portfolio{padding:5rem 0}
+  .hero-content{padding:0 1.5rem 4rem}
+  .hero h1{font-size:clamp(2.5rem,10vw,4rem)}
+  .hero-buttons{flex-direction:column;width:100%}
+  .hero-buttons .btn-filled,.hero-buttons .btn-outline-light{width:100%;text-align:center}
+  .brand-stats{grid-template-columns:1fr 1fr}
+  .wedding-story-grid{grid-template-columns:1fr;gap:2rem}
+  .story-img-1,.story-img-2{margin:0}
+  .bg-grid{grid-template-columns:1fr !important;gap:2.5rem}
+  .bg-grid.reverse .bg-text{order:1}
+  .bg-grid.reverse .bg-images{order:2}
+  .bg-section{padding:5rem 1.5rem}
+  .packages-grid{grid-template-columns:1fr;gap:1.5rem}
+  .add-grid{grid-template-columns:1fr}
+  .add-card.featured-ai{grid-column:span 1}
+  .why-grid{grid-template-columns:1fr;gap:1.5rem}
+  .why-stats{grid-template-columns:1fr;gap:2rem}
+  .ig-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr;gap:2.5rem}
+  .contact-form{padding:2rem 1.5rem}
+  .form-row{grid-template-columns:1fr}
+  .form-field.full{grid-column:span 1}
+  .form-checks-grid{grid-template-columns:1fr 1fr}
+  .pf-1,.pf-2,.pf-3,.pf-4,.pf-5,.pf-6,.pf-7{grid-column:span 12;aspect-ratio:4/5}
+  .couple-feature{height:80vh}
+  .floating-actions{bottom:1rem;right:1rem}
+  .floating-btn{width:46px;height:46px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .story-text-overlay{position:relative;transform:none;top:auto;left:auto;margin:2rem 0}
+  .story-text-overlay h2{padding:1.5rem}
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
+  .hero-bg img{animation:none;transform:scale(1)}
+  .couple-feature-bg img{animation:none}
+}
+</style>
+</head>
+<body class="grain">
+
+<!-- ===== LOADER ===== -->
+<div class="loader" id="loader">
+  <div class="loader-flower">
+    <svg viewBox="0 0 100 100" fill="none">
+      <g stroke="#b8956a" stroke-width="1.2">
+        <ellipse cx="50" cy="30" rx="8" ry="18"/>
+        <ellipse cx="50" cy="70" rx="8" ry="18"/>
+        <ellipse cx="30" cy="50" rx="18" ry="8"/>
+        <ellipse cx="70" cy="50" rx="18" ry="8"/>
+        <ellipse cx="36" cy="36" rx="14" ry="6" transform="rotate(-45 36 36)"/>
+        <ellipse cx="64" cy="36" rx="14" ry="6" transform="rotate(45 64 36)"/>
+        <ellipse cx="36" cy="64" rx="14" ry="6" transform="rotate(45 36 64)"/>
+        <ellipse cx="64" cy="64" rx="14" ry="6" transform="rotate(-45 64 64)"/>
+        <circle cx="50" cy="50" r="6" fill="#b8956a"/>
+      </g>
+    </svg>
+  </div>
+  <div class="loader-title">
+    <span style="animation-delay:0.3s">V</span>
+    <span style="animation-delay:0.4s">E</span>
+    <span style="animation-delay:0.5s">L</span>
+    <span style="animation-delay:0.6s">O</span>
+    <span style="animation-delay:0.7s">R</span>
+    <span style="animation-delay:0.8s">A</span>
+    <span style="margin:0 0.3em"></span>
+    <span style="animation-delay:1.0s">W</span>
+    <span style="animation-delay:1.1s">E</span>
+    <span style="animation-delay:1.2s">D</span>
+    <span style="animation-delay:1.3s">F</span>
+    <span style="animation-delay:1.4s">I</span>
+    <span style="animation-delay:1.5s">L</span>
+    <span style="animation-delay:1.6s">M</span>
+    <span style="animation-delay:1.7s">S</span>
+  </div>
+  <div class="loader-line"></div>
+  <div class="loader-subtitle">Make Your Moment Memorable</div>
+</div>
+
+<!-- ===== CUSTOM CURSOR ===== -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" id="nav">
+  <a href="#home" class="nav-logo" data-cursor="hover">
+    <div class="nav-logo-flower">
+      <svg viewBox="0 0 100 100" fill="none">
+        <g stroke="#b8956a" stroke-width="2">
+          <ellipse cx="50" cy="30" rx="8" ry="18"/>
+          <ellipse cx="50" cy="70" rx="8" ry="18"/>
+          <ellipse cx="30" cy="50" rx="18" ry="8"/>
+          <ellipse cx="70" cy="50" rx="18" ry="8"/>
+          <ellipse cx="36" cy="36" rx="14" ry="6" transform="rotate(-45 36 36)"/>
+          <ellipse cx="64" cy="36" rx="14" ry="6" transform="rotate(45 64 36)"/>
+          <ellipse cx="36" cy="64" rx="14" ry="6" transform="rotate(45 36 64)"/>
+          <ellipse cx="64" cy="64" rx="14" ry="6" transform="rotate(-45 64 64)"/>
+          <circle cx="50" cy="50" r="6" fill="#b8956a"/>
+        </g>
+      </svg>
+    </div>
+    <div class="nav-logo-text">
+      <span class="name">Velora</span>
+      <span class="tag">Wedfilms</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#home" class="nav-link" data-cursor="hover">Home</a></li>
+    <li><a href="#about" class="nav-link" data-cursor="hover">About</a></li>
+    <li><a href="#services" class="nav-link" data-cursor="hover">Services</a></li>
+    <li><a href="#packages" class="nav-link" data-cursor="hover">Packages</a></li>
+    <li><a href="#portfolio" class="nav-link" data-cursor="hover">Portfolio</a></li>
+    <li><a href="#contact" class="nav-link" data-cursor="hover">Contact</a></li>
+  </ul>
+
+  <div class="nav-cta">
+    <a href="#packages" class="btn-outline" data-cursor="hover">View Packages</a>
+    <a href="#contact" class="btn-filled" data-cursor="hover">Contact Us</a>
+  </div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" data-mobile-link>Home</a>
+  <a href="#about" data-mobile-link>About</a>
+  <a href="#services" data-mobile-link>Services</a>
+  <a href="#packages" data-mobile-link>Packages</a>
+  <a href="#portfolio" data-mobile-link>Portfolio</a>
+  <a href="#contact" data-mobile-link>Contact</a>
+  <div class="mobile-menu-cta">
+    <a href="#packages" class="btn-outline" data-mobile-link style="color:var(--ivory)">View Packages</a>
+    <a href="#contact" class="btn-filled" data-mobile-link>Contact Us</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="https://z-cdn-media.chatglm.cn/files/18ea3b89-1f5b-4431-b46d-55e8121039f1.jpg?auth_key=1887667804-a5d02d2a55c145c199052fa9d73301c9-0-aace72bcf5d6c5f824061c1e8ac53b52" alt="Velora Wedfilms couple wedding ceremony Kerala" loading="eager">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-label">
+      <div class="hero-label-line"></div>
+      <span class="hero-label-text">Wedding Films • Photography</span>
+    </div>
+    <h1>
+      <span class="line"><span>Your Story.</span></span>
+      <span class="line"><span>Your <em>Love.</em></span></span>
+      <span class="line"><span>Your Moment.</span></span>
+    </h1>
+    <p class="hero-desc">Wedding photography & cinematography crafted to make your most beautiful moments last forever.</p>
+    <div class="hero-meta">
+      <span class="brand">Velora Wedfilms</span>
+      <span class="dot"></span>
+      <span class="place">Trivandrum • Kerala</span>
+    </div>
+    <div class="hero-buttons">
+      <a href="#packages" class="btn-filled btn-large" data-cursor="hover" data-scroll="packages">Explore Our Packages</a>
+      <a href="#contact" class="btn-outline-light" data-cursor="hover" data-scroll="contact">Contact Us</a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span class="scroll-indicator-text">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== BRAND INTRO ===== -->
+<section class="brand-intro" id="about">
+  <div class="brand-intro-grid">
+    <div class="brand-intro-left">
+      <span class="label reveal">— The Studio</span>
+      <h2 class="reveal reveal-delay-1">We don't just capture weddings.<br><em>We preserve feelings.</em></h2>
+      <p class="reveal reveal-delay-2">Velora Wedfilms is a wedding photography and cinematography company based in Trivandrum, Kerala, founded in 2026 by Anjith A S.</p>
+      <p class="reveal reveal-delay-2">We create timeless photographs and cinematic films that preserve the emotions, laughter, tears and unforgettable moments of your wedding day.</p>
+      <p class="reveal reveal-delay-3">Currently serving couples across Kerala and Tamil Nadu, with a vision to bring the Velora experience to weddings across India.</p>
+      <div class="brand-intro-logo reveal reveal-delay-3">
+        <img src="https://z-cdn-media.chatglm.cn/files/2a44f2e0-7007-462d-a19d-4117d210b89f.png?auth_key=1887667804-e6a36fee0eea4f3b8cf89e362bc43b88-0-fda7a9e1c7efad932fc4b136080c1569" alt="Velora Wedfilms official logo" loading="lazy">
+      </div>
+    </div>
+    <div class="brand-stats reveal reveal-delay-2">
+      <div class="brand-stat">
+        <span class="label">Founded</span>
+        <span class="value">2026</span>
+        <span class="desc">A new vision in wedding cinema</span>
+      </div>
+      <div class="brand-stat">
+        <span class="label">Based in</span>
+        <span class="value">Trivandrum</span>
+        <span class="desc">Kerala, India</span>
+      </div>
+      <div class="brand-stat">
+        <span class="label">Serving</span>
+        <span class="value">Kerala & Tamil Nadu</span>
+        <span class="desc">Two states, one promise</span>
+      </div>
+      <div class="brand-stat">
+        <span class="label">Future</span>
+        <span class="value">All India</span>
+        <span class="desc">A growing journey</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WEDDING STORY ===== -->
+<section class="wedding-story">
+  <div class="section-header reveal">
+    <span class="label">— Chapter One</span>
+    <h2>Every Love Story Deserves<br>to be <em>Remembered.</em></h2>
+  </div>
+
+  <div class="wedding-story-grid">
+    <div class="story-img-wrap reveal-img story-img-1">
+      <img src="https://z-cdn-media.chatglm.cn/files/73ae2cdc-3830-4a88-94a0-735332f94f7b.jpg?auth_key=1887667804-9d012bce0df94699abafe7990f17a7b2-0-1af250ac9ee7e949e685eaaa84636033" alt="Save the date wedding photography Kerala" loading="lazy">
+      <div class="story-caption">
+        <span class="label">Save the Date</span>
+        <p>Where two souls begin a single journey.</p>
+      </div>
+    </div>
+
+    <div class="story-text-overlay reveal reveal-delay-2">
+      <span class="label">Velora Wedfilms</span>
+      <h2>From the first announcement<br>to the <em>final celebration.</em></h2>
+    </div>
+
+    <div class="story-img-wrap reveal-img story-img-2">
+      <img src="https://z-cdn-media.chatglm.cn/files/24f0556f-10ea-4435-808b-356273fd502e.jpg?auth_key=1887667804-0856f76f290944b382084858f6bbc10e-0-a2c6133ff2c7fde669aec924641fb8ed" alt="Couple pre-wedding photography Trivandrum" loading="lazy">
+      <div class="story-caption">
+        <span class="label">The Beginning</span>
+        <p>A story you can relive for generations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wedding-story-quote reveal">
+    <p>“From the first announcement to the final celebration, we turn your wedding journey into a story you can relive for generations.”</p>
+  </div>
+</section>
+
+<!-- ===== BRIDE & GROOM ===== -->
+<section class="bride-groom">
+  <!-- Bride -->
+  <div class="bg-section bride">
+    <div class="bg-grid">
+      <div class="bg-text reveal">
+        <span class="label">— Chapter Two</span>
+        <h2>The <em>Bride.</em></h2>
+        <p class="quote">“Every glance, every smile, every quiet moment before she walks into forever.”</p>
+        <p class="desc">From the intricate details of her saree to the silent emotion in her eyes — the bride's story is one of grace, anticipation and beauty. We capture every breath of it.</p>
+        <ul class="meta-list">
+          <li><span>Portrait Style</span><span>Cinematic Editorial</span></li>
+          <li><span>Coverage</span><span>Pre-Function to Vidaai</span></li>
+          <li><span>Detail Shots</span><span>Jewellery • Mehndi • Saree</span></li>
+        </ul>
+      </div>
+      <div class="bg-images">
+        <div class="reveal-img bg-img-main">
+          <img src="https://z-cdn-media.chatglm.cn/files/f0a39e51-93bb-411f-9f8e-2187f36955f4.jpg?auth_key=1887667804-ed37b1a266194aedb056b494198243b1-0-194b220091c119664536d59622f62455" alt="Bride portrait wedding photography Kerala" loading="lazy">
+          <span class="bg-img-label">Bride Portrait</span>
+        </div>
+        <div class="reveal-img bg-img-secondary">
+          <img src="https://z-cdn-media.chatglm.cn/files/0fad7756-d07f-4f81-80a5-b876103ac52d.jpg?auth_key=1887667804-8a15677f2d534a53b9aa1de9258cd130-0-6107417f7c6b187863446f46c69965c5" alt="Bride traditional saree Kerala wedding" loading="lazy">
+          <span class="bg-img-label">Ceremony</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Groom -->
+  <div class="bg-section groom">
+    <div class="bg-grid reverse">
+      <div class="bg-text reveal">
+        <span class="label">— Chapter Three</span>
+        <h2>The <em>Groom.</em></h2>
+        <p class="quote">“Anticipation, emotion and the moment he sees his forever begin.”</p>
+        <p class="desc">The groom's story is often quiet, but deeply felt — a held breath, a steady hand, a heart ready. We capture the stillness before a life begins.</p>
+        <ul class="meta-list">
+          <li><span>Portrait Style</span><span>Editorial • Candid</span></li>
+          <li><span>Coverage</span><span>Preparation to Muhurtham</span></li>
+          <li><span>Detail Shots</span><span>Attire • Accessories • Moments</span></li>
+        </ul>
+      </div>
+      <div class="bg-images">
+        <div class="reveal-img bg-img-main">
+          <img src="https://z-cdn-media.chatglm.cn/files/5535d353-d033-4bc5-a891-5b8f6eb8c917.jpg?auth_key=1887667804-b58862b9a8414cd6ba82f91f591c0eba-0-a23c2644089a0864162b3452a655b130" alt="Groom portrait traditional Kerala wedding" loading="lazy">
+          <span class="bg-img-label">Groom Portrait</span>
+        </div>
+        <div class="reveal-img bg-img-secondary">
+          <img src="https://z-cdn-media.chatglm.cn/files/8ce6ce56-e4db-4bf9-8dde-ca2fd7fa8703.jpg?auth_key=1887667804-a7f2ffaab2824348ad10ae266cfba15c-0-fd95d28b46dc3541b7a73e96e5a1dc0c" alt="Groom candid wedding photography Tamil Nadu" loading="lazy">
+          <span class="bg-img-label">Preparation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services" id="services">
+  <div class="section-header reveal">
+    <span class="label">— What We Create</span>
+    <h2>Crafted for the<br><em>Cinematic Couple.</em></h2>
+    <p class="sub">A complete wedding experience designed around your story.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card reveal" data-cursor="hover">
+      <div class="service-num">01</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+        <circle cx="12" cy="13" r="4"/>
+      </svg>
+      <h3>Wedding Photography</h3>
+      <p class="service-desc">Timeless photographs capturing genuine emotions and unforgettable details.</p>
+    </div>
+
+    <div class="service-card reveal reveal-delay-1" data-cursor="hover">
+      <div class="service-num">02</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <polygon points="23 7 16 12 23 17 23 7"/>
+        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+      </svg>
+      <h3>Wedding Cinematography</h3>
+      <p class="service-desc">Cinematic wedding films crafted around your unique love story.</p>
+    </div>
+
+    <div class="service-card reveal reveal-delay-2" data-cursor="hover">
+      <div class="service-num">03</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+      <h3>Pre-Wedding</h3>
+      <p class="service-desc">Creative pre-wedding photography and cinematic short films.</p>
+    </div>
+
+    <div class="service-card reveal reveal-delay-3" data-cursor="hover">
+      <div class="service-num">04</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="2" y="2" width="20" height="20" rx="2"/>
+        <line x1="7" y1="2" x2="7" y2="22"/>
+        <line x1="17" y1="2" x2="17" y2="22"/>
+      </svg>
+      <h3>Wedding Reels</h3>
+      <p class="service-desc">Modern short-form wedding films designed for social media.</p>
+    </div>
+
+    <div class="service-card reveal reveal-delay-4" data-cursor="hover">
+      <div class="service-num">05</div>
+      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <circle cx="12" cy="12" r="10"/>
+        <circle cx="12" cy="12" r="4"/>
+        <line x1="12" y1="2" x2="12" y2="6"/>
+        <line x1="12" y1="18" x2="12" y2="22"/>
+      </svg>
+      <h3>Live Wedding Experience</h3>
+      <p class="service-desc">Real-time wedding coverage and live visual experiences.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PACKAGES ===== -->
+<section class="packages" id="packages">
+  <div class="section-header reveal">
+    <span class="label">— Investment</span>
+    <h2>Choose Your<br><em>Wedding Experience.</em></h2>
+    <p class="sub">“Thoughtfully designed packages for every kind of celebration.”</p>
+  </div>
+
+  <div class="packages-grid">
+    <!-- BASIC -->
+    <div class="pkg-card reveal" data-cursor="hover">
+      <div class="pkg-name">Basic</div>
+      <div class="pkg-tagline">Essential</div>
+      <div class="pkg-price">
+        <span class="currency">₹</span>
+        <span class="amount">45,000</span>
+      </div>
+      <ul class="pkg-features">
+        <li>1 Photographer</li>
+        <li>1 Videographer</li>
+        <li>Highlight Video</li>
+        <li>Wedding Video</li>
+        <li>40 Leaf Album / 80 Pages</li>
+        <li>Mini Album</li>
+        <li>3 Wedding Frames</li>
+        <li>Wedding Wall Calendar</li>
+        <li>Pendrive</li>
+      </ul>
+      <button class="pkg-btn" data-package="Basic — ₹45,000" data-cursor="hover">Enquire Now</button>
+    </div>
+
+    <!-- STANDARD -->
+    <div class="pkg-card featured reveal reveal-delay-1" data-cursor="hover">
+      <div class="pkg-badge">Most Booked</div>
+      <div class="pkg-name">Standard</div>
+      <div class="pkg-tagline">Favourite</div>
+      <div class="pkg-price">
+        <span class="currency">₹</span>
+        <span class="amount">55,000</span>
+      </div>
+      <ul class="pkg-features">
+        <li>1 Photographer</li>
+        <li>1 Videographer</li>
+        <li>Pre-Wedding Shoot</li>
+        <li>Pre-Wedding Video</li>
+        <li>Highlight Video</li>
+        <li>Wedding Video</li>
+        <li>40 Leaf Album / 80 Pages</li>
+        <li>Mini Album</li>
+        <li>3 Wedding Frames</li>
+        <li>Cup</li>
+        <li>Wedding Wall Calendar</li>
+        <li>Pendrive</li>
+      </ul>
+      <button class="pkg-btn" data-package="Standard — ₹55,000" data-cursor="hover">Choose Standard</button>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="pkg-card reveal reveal-delay-2" data-cursor="hover">
+      <div class="pkg-name">Premium</div>
+      <div class="pkg-tagline">Enhanced</div>
+      <div class="pkg-price">
+        <span class="currency">₹</span>
+        <span class="amount">85,000</span>
+      </div>
+      <ul class="pkg-features">
+        <li>2 Photographers</li>
+        <li>2 Videographers</li>
+        <li>Highlight Video</li>
+        <li>Wedding Video</li>
+        <li>Wedding Reel</li>
+        <li>80 Leaf Album / 160 Pages</li>
+        <li>Mini Album</li>
+        <li>3 Wedding Frames</li>
+        <li>Cup</li>
+        <li>Wedding Wall Calendar</li>
+        <li>Pendrive</li>
+      </ul>
+      <button class="pkg-btn" data-package="Premium — ₹85,000" data-cursor="hover">Choose Premium</button>
+    </div>
+
+    <!-- PREMIUM PLUS -->
+    <div class="pkg-card premium-plus reveal reveal-delay-3" data-cursor="hover">
+      <div class="pkg-badge luxury">Most Premium</div>
+      <div class="pkg-name">Premium Plus</div>
+      <div class="pkg-tagline">The Complete Story</div>
+      <div class="pkg-price">
+        <span class="currency">₹</span>
+        <span class="amount">1,10,000</span>
+      </div>
+      <ul class="pkg-features">
+        <li>2 Photographers</li>
+        <li>2 Videographers</li>
+        <li>Pre-Wedding Shoot</li>
+        <li>Pre-Wedding Video</li>
+        <li>Highlight Video</li>
+        <li>Wedding Video</li>
+        <li>Wedding Reel</li>
+        <li>80 Leaf Album / 160 Pages</li>
+        <li>Mini Album</li>
+        <li>3 Wedding Frames</li>
+        <li>Cup</li>
+        <li>Wedding Wall Calendar</li>
+        <li>Pendrive</li>
+      </ul>
+      <button class="pkg-btn" data-package="Premium Plus — ₹1,10,000" data-cursor="hover">Choose Premium Plus</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ADDITIONAL SERVICES ===== -->
+<section class="additional">
+  <div class="section-header reveal">
+    <span class="label">— Enhancements</span>
+    <h2>Make Your Wedding Experience<br><em>Even Bigger.</em></h2>
+  </div>
+
+  <div class="add-grid">
+    <div class="add-card reveal" data-cursor="hover">
+      <svg class="add-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="2" y="3" width="20" height="14" rx="2"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+      <h3>LED Wall</h3>
+      <p class="add-desc">Large-format visual experience for your celebration.</p>
+    </div>
+
+    <div class="add-card reveal reveal-delay-1" data-cursor="hover">
+      <svg class="add-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <circle cx="12" cy="12" r="3"/>
+        <line x1="12" y1="2" x2="12" y2="6"/>
+        <line x1="12" y1="18" x2="12" y2="22"/>
+        <line x1="2" y1="12" x2="6" y2="12"/>
+        <line x1="18" y1="12" x2="22" y2="12"/>
+        <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+        <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+      </svg>
+      <h3>Helicam</h3>
+      <p class="add-desc">Aerial cinematic coverage of your wedding.</p>
+    </div>
+
+    <div class="add-card reveal reveal-delay-2" data-cursor="hover">
+      <svg class="add-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <polygon points="23 7 16 12 23 17 23 7"/>
+        <rect x="1" y="5" width="15" height="14" rx="2"/>
+      </svg>
+      <h3>Live Streaming</h3>
+      <p class="add-desc">Share your wedding moments with loved ones anywhere.</p>
+    </div>
+
+    <div class="add-card reveal" data-cursor="hover">
+      <svg class="add-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="9" y1="15" x2="15" y2="15"/>
+      </svg>
+      <h3>Spot Editing</h3>
+      <p class="add-desc">Fast turnaround wedding edits for immediate celebrations.</p>
+    </div>
+
+    <div class="add-card reveal reveal-delay-1" data-cursor="hover">
+      <svg class="add-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="3" y="3" width="18" height="18" rx="2"/>
+        <circle cx="8.5" cy="8.5" r="1.5"/>
+        <polyline points="21 15 16 10 5 21"/>
+      </svg>
+      <h3>Live Photo Printing</h3>
+      <p class="add-desc">Beautiful photographs printed during your event.</p>
+    </div>
+
+    <div class="add-card featured-ai reveal reveal-delay-2" data-cursor="hover">
+      <svg class="add-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+        <rect x="3" y="3" width="7" height="7"/>
+        <rect x="14" y="3" width="7" height="7"/>
+        <rect x="14" y="14" width="7" height="7"/>
+        <rect x="3" y="14" width="7" height="7"/>
+      </svg>
+      <h3>AI-Powered Live Photo Download</h3>
+      <p class="add-desc">Guests receive event photographs instantly through a QR code.</p>
+      <span class="add-tag">Modern Feature</span>
+      <div class="add-qr-demo">
+        <div class="qr-placeholder"><i class="fas fa-qrcode"></i></div>
+        <div class="qr-text">Scan. Smile. Receive your photos in seconds.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY VELORA ===== -->
+<section class="why">
+  <div class="section-header reveal">
+    <span class="label">— Our Promise</span>
+    <h2>Why Velora <em>Wedfilms.</em></h2>
+    <p class="sub">Six reasons couples trust us with their most precious moments.</p>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-item reveal">
+      <div class="why-num">01</div>
+      <h3>Emotion First</h3>
+      <p>We focus on real moments rather than forced poses — capturing the way your day actually felt.</p>
+    </div>
+    <div class="why-item reveal reveal-delay-1">
+      <div class="why-num">02</div>
+      <h3>Cinematic Storytelling</h3>
+      <p>Every wedding is treated as a unique story, with pacing, sound and visuals crafted like a film.</p>
+    </div>
+    <div class="why-item reveal reveal-delay-2">
+      <div class="why-num">03</div>
+      <h3>Modern Technology</h3>
+      <p>We combine creative filmmaking with the latest capture and editing technology.</p>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-num">04</div>
+      <h3>Premium Quality</h3>
+      <p>From the first click to final delivery, quality guides every single decision we make.</p>
+    </div>
+    <div class="why-item reveal reveal-delay-1">
+      <div class="why-num">05</div>
+      <h3>Personalized Experience</h3>
+      <p>Every couple gets a wedding experience designed entirely around who they are.</p>
+    </div>
+    <div class="why-item reveal reveal-delay-2">
+      <div class="why-num">06</div>
+      <h3>Kerala & Tamil Nadu</h3>
+      <p>Currently serving weddings across Kerala and Tamil Nadu — wherever your story unfolds.</p>
+    </div>
+  </div>
+
+  <div class="why-stats">
+    <div class="why-stat reveal">
+      <div class="num">2026</div>
+      <div class="lbl">Founded</div>
+    </div>
+    <div class="why-stat reveal reveal-delay-1">
+      <div class="num">2 States</div>
+      <div class="lbl">Currently Serving</div>
+    </div>
+    <div class="why-stat reveal reveal-delay-2">
+      <div class="num">100%</div>
+      <div class="lbl">Story Driven</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section class="portfolio" id="portfolio">
+  <div class="section-header reveal">
+    <span class="label">— Selected Work</span>
+    <h2>Love,<br><em>Frame by Frame.</em></h2>
+    <p class="sub">A curated selection from the weddings we've had the honour to capture.</p>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item pf-1 reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/18ea3b89-1f5b-4431-b46d-55e8121039f1.jpg?auth_key=1887667804-a5d02d2a55c145c199052fa9d73301c9-0-aace72bcf5d6c5f824061c1e8ac53b52" alt="Wedding ceremony Kerala Velora Wedfilms" loading="lazy">
+      <div class="portfolio-caption">
+        <span class="label">The Ceremony</span>
+        <h4>Vows & Garlands</h4>
+      </div>
+    </div>
+    <div class="portfolio-item pf-2 reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/f0a39e51-93bb-411f-9f8e-2187f36955f4.jpg?auth_key=1887667804-ed37b1a266194aedb056b494198243b1-0-194b220091c119664536d59622f62455" alt="Bride portrait traditional Kerala wedding" loading="lazy">
+      <div class="portfolio-caption">
+        <span class="label">The Bride</span>
+        <h4>Quiet Grace</h4>
+      </div>
+    </div>
+    <div class="portfolio-item pf-3 reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/5535d353-d033-4bc5-a891-5b8f6eb8c917.jpg?auth_key=1887667804-b58862b9a8414cd6ba82f91f591c0eba-0-a23c2644089a0864162b3452a655b130" alt="Groom portrait wedding photography Kerala" loading="lazy">
+      <div class="portfolio-caption">
+        <span class="label">The Groom</span>
+        <h4>Steady Heart</h4>
+      </div>
+    </div>
+    <div class="portfolio-item pf-4 reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/0fad7756-d07f-4f81-80a5-b876103ac52d.jpg?auth_key=1887667804-8a15677f2d534a53b9aa1de9258cd130-0-6107417f7c6b187863446f46c69965c5" alt="Bride traditional ceremony Kerala wedding" loading="lazy">
+      <div class="portfolio-caption">
+        <span class="label">Tradition</span>
+        <h4>Sacred Moments</h4>
+      </div>
+    </div>
+    <div class="portfolio-item pf-5 reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/8ce6ce56-e4db-4bf9-8dde-ca2fd7fa8703.jpg?auth_key=1887667804-a7f2ffaab2824348ad10ae266cfba15c-0-fd95d28b46dc3541b7a73e96e5a1dc0c" alt="Groom candid wedding photography" loading="lazy">
+      <div class="portfolio-caption">
+        <span class="label">Preparation</span>
+        <h4>The Calm Before</h4>
+      </div>
+    </div>
+    <div class="portfolio-item pf-6 reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/3ea77fc2-6582-4d97-8332-0f540cee3944.jpg?auth_key=1887667804-5e63acd033f5473db6e0a993954162de-0-51940ef856ec2c089b6346d613727beb" alt="Couple traditional wedding portrait Tamil Nadu" loading="lazy">
+      <div class="portfolio-caption">
+        <span class="label">Together</span>
+        <h4>Forever Begins</h4>
+      </div>
+    </div>
+    <div class="portfolio-item pf-7 reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/73ae2cdc-3830-4a88-94a0-735332f94f7b.jpg?auth_key=1887667804-9d012bce0df94699abafe7990f17a7b2-0-1af250ac9ee7e949e685eaaa84636033" alt="Pre-wedding photography outdoor Kerala" loading="lazy">
+      <div class="portfolio-caption">
+        <span class="label">Pre-Wedding</span>
+        <h4>Open Fields, Open Hearts</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-cta reveal">
+    <a href="#contact" class="btn-outline-light" data-cursor="hover">View Our Stories</a>
+  </div>
+</section>
+
+<!-- ===== COUPLE FEATURE ===== -->
+<section class="couple-feature">
+  <div class="couple-feature-bg">
+    <img src="https://z-cdn-media.chatglm.cn/files/3ea77fc2-6582-4d97-8332-0f540cee3944.jpg?auth_key=1887667804-5e63acd033f5473db6e0a993954162de-0-51940ef856ec2c089b6346d613727beb" alt="Couple wedding film Velora Wedfilms" loading="lazy">
+  </div>
+  <div class="couple-feature-overlay"></div>
+  <div class="couple-feature-content">
+    <span class="label reveal">— A Memory</span>
+    <h2 class="reveal reveal-delay-1">“The best thing about memories<br>is <em>making them.</em>”</h2>
+    <div class="divider reveal reveal-delay-2"></div>
+    <div class="brand reveal reveal-delay-3">Velora Wedfilms</div>
+  </div>
+</section>
+
+<!-- ===== FUTURE VISION ===== -->
+<section class="future">
+  <div class="future-grid">
+    <div class="future-text">
+      <span class="label reveal">— The Bigger Dream</span>
+      <h2 class="reveal reveal-delay-1">The Journey<br><em>Ahead.</em></h2>
+      <p class="reveal reveal-delay-2">“Velora Wedfilms begins in Kerala with a bigger dream ahead.”</p>
+
+      <ul class="future-list reveal reveal-delay-2">
+        <li>
+          <div class="icon"><i class="fas fa-camera"></i></div>
+          <span class="label-text">Wedding Photography & Cinematography</span>
+          <span class="desc-text">Now</span>
+        </li>
+        <li>
+          <div class="icon"><i class="fas fa-utensils"></i></div>
+          <span class="label-text">Catering</span>
+          <span class="desc-text">Coming Soon</span>
+        </li>
+        <li>
+          <div class="icon"><i class="fas fa-gem"></i></div>
+          <span class="label-text">Stage Decoration</span>
+          <span class="desc-text">Coming Soon</span>
+        </li>
+        <li>
+          <div class="icon"><i class="fas fa-star"></i></div>
+          <span class="label-text">Complete Wedding Services</span>
+          <span class="desc-text">Vision</span>
+        </li>
+      </ul>
+
+      <div class="future-vision-final reveal reveal-delay-3">
+        <div class="small">Long-Term Vision</div>
+        <div class="big">VELORA WEDFILMS — INDIA</div>
+      </div>
+    </div>
+
+    <div class="future-visual reveal reveal-delay-2">
+      <div class="future-map">
+        <svg viewBox="0 0 400 440" xmlns="http://www.w3.org/2000/svg">
+          <!-- Simplified elegant India outline -->
+          <path d="M 130 60 Q 160 50 190 55 L 220 50 Q 250 55 270 70 L 290 90 Q 305 110 310 130 L 320 160 Q 325 180 320 200 L 315 220 Q 310 240 300 260 L 290 280 Q 280 300 270 320 L 250 340 Q 230 360 210 370 L 190 380 Q 170 385 160 380 L 145 370 Q 130 350 120 330 L 110 310 Q 100 290 95 270 L 90 250 Q 85 230 80 210 L 75 190 Q 70 170 75 150 L 85 130 Q 95 110 105 95 L 115 80 Q 120 70 130 60 Z" 
+                fill="none" stroke="#b8956a" stroke-width="1.2" stroke-dasharray="0" opacity="0.7"/>
+          <path d="M 150 380 L 170 410 L 200 415 L 230 410 L 250 380" fill="none" stroke="#b8956a" stroke-width="1.2" opacity="0.7"/>
+          <!-- Inner decorative elements -->
+          <circle cx="200" cy="220" r="3" fill="#b8956a" opacity="0.3"/>
+          <circle cx="200" cy="220" r="8" fill="none" stroke="#b8956a" stroke-width="0.5" opacity="0.2"/>
+          <circle cx="200" cy="220" r="15" fill="none" stroke="#b8956a" stroke-width="0.5" opacity="0.1"/>
+          <!-- Labels -->
+          <text x="200" y="50" text-anchor="middle" fill="#b8956a" font-size="9" letter-spacing="3" font-family="Inter">INDIA</text>
+        </svg>
+        <div class="future-marker active" style="top:75%;left:32%">
+          <div class="dot"></div>
+          <div class="name">Kerala</div>
+        </div>
+        <div class="future-marker active" style="top:72%;left:48%">
+          <div class="dot"></div>
+          <div class="name">Tamil Nadu</div>
+        </div>
+        <div class="future-marker future" style="top:45%;left:55%">
+          <div class="dot"></div>
+          <div class="name">Mumbai</div>
+        </div>
+        <div class="future-marker future" style="top:35%;left:68%">
+          <div class="dot"></div>
+          <div class="name">Delhi</div>
+        </div>
+        <div class="future-marker future" style="top:60%;left:70%">
+          <div class="dot"></div>
+          <div class="name">Bengaluru</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INSTAGRAM ===== -->
+<section class="instagram">
+  <div class="section-header reveal">
+    <span class="label">— Social Stories</span>
+    <h2>Follow Our<br><em>Stories.</em></h2>
+  </div>
+  <div class="ig-handle reveal reveal-delay-1">@Velora_wedfilms</div>
+
+  <div class="ig-grid">
+    <a href="https://instagram.com/Velora_wedfilms" target="_blank" rel="noopener" class="ig-item reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/18ea3b89-1f5b-4431-b46d-55e8121039f1.jpg?auth_key=1887667804-a5d02d2a55c145c199052fa9d73301c9-0-aace72bcf5d6c5f824061c1e8ac53b52" alt="Velora Wedfilms Instagram" loading="lazy">
+    </a>
+    <a href="https://instagram.com/Velora_wedfilms" target="_blank" rel="noopener" class="ig-item reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/f0a39e51-93bb-411f-9f8e-2187f36955f4.jpg?auth_key=1887667804-ed37b1a266194aedb056b494198243b1-0-194b220091c119664536d59622f62455" alt="Bride portrait Instagram Velora" loading="lazy">
+    </a>
+    <a href="https://instagram.com/Velora_wedfilms" target="_blank" rel="noopener" class="ig-item reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/3ea77fc2-6582-4d97-8332-0f540cee3944.jpg?auth_key=1887667804-5e63acd033f5473db6e0a993954162de-0-51940ef856ec2c089b6346d613727beb" alt="Couple wedding Instagram Velora Wedfilms" loading="lazy">
+    </a>
+    <a href="https://instagram.com/Velora_wedfilms" target="_blank" rel="noopener" class="ig-item reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/5535d353-d033-4bc5-a891-5b8f6eb8c917.jpg?auth_key=1887667804-b58862b9a8414cd6ba82f91f591c0eba-0-a23c2644089a0864162b3452a655b130" alt="Groom portrait Instagram Velora" loading="lazy">
+    </a>
+    <a href="https://instagram.com/Velora_wedfilms" target="_blank" rel="noopener" class="ig-item reveal-img" data-cursor="hover">
+      <img src="https://z-cdn-media.chatglm.cn/files/73ae2cdc-3830-4a88-94a0-735332f94f7b.jpg?auth_key=1887667804-9d012bce0df94699abafe7990f17a7b2-0-1af250ac9ee7e949e685eaaa84636033" alt="Pre-wedding Instagram Velora" loading="lazy">
+    </a>
+  </div>
+
+  <a href="https://instagram.com/Velora_wedfilms" target="_blank" rel="noopener" class="btn-filled btn-large" data-cursor="hover">
+    <i class="fab fa-instagram" style="margin-right:0.5rem"></i>Follow on Instagram
+  </a>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <span class="label reveal">— Get in Touch</span>
+      <h2 class="reveal reveal-delay-1">Let's Make Your<br>Moment <em>Memorable.</em></h2>
+      <p class="quote reveal reveal-delay-2">“Tell us about your wedding and let's create something unforgettable.”</p>
+
+      <div class="contact-methods reveal reveal-delay-3">
+        <a href="tel:+917907891427" class="contact-method" data-cursor="hover">
+          <div class="icon"><i class="fas fa-phone"></i></div>
+          <div class="info">
+            <span class="lbl">Call Us</span>
+            <span class="val">+91 79078 91427</span>
+          </div>
+        </a>
+        <a href="mailto:Velorawedfilms@gmail.com" class="contact-method" data-cursor="hover">
+          <div class="icon"><i class="fas fa-envelope"></i></div>
+          <div class="info">
+            <span class="lbl">Email Us</span>
+            <span class="val">Velorawedfilms@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://instagram.com/Velora_wedfilms" target="_blank" rel="noopener" class="contact-method" data-cursor="hover">
+          <div class="icon"><i class="fab fa-instagram"></i></div>
+          <div class="info">
+            <span class="lbl">Instagram</span>
+            <span class="val">@Velora_wedfilms</span>
+          </div>
+        </a>
+      </div>
+
+      <a href="https://wa.me/917907891427?text=Hi%20Velora%20Wedfilms,%20I%20would%20like%20to%20enquire%20about%20your%20wedding%20packages." target="_blank" rel="noopener" class="contact-whatsapp" data-cursor="hover">
+        <i class="fab fa-whatsapp"></i> Chat With Us
+      </a>
+    </div>
+
+    <form class="contact-form reveal reveal-delay-2" id="enquiryForm">
+      <div class="form-selected-pkg" id="selectedPkgDisplay">
+        <div>
+          <span class="lbl">Selected Package</span>
+          <span class="val" id="selectedPkgValue">—</span>
+        </div>
+        <button type="button" class="clear" id="clearPkg" aria-label="Clear package selection"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="date">Wedding Date</label>
+          <input type="date" id="date" name="date">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field full">
+          <label for="location">Wedding Location</label>
+          <input type="text" id="location" name="location" placeholder="e.g. Trivandrum, Kerala">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field full">
+          <label for="package">Selected Package</label>
+          <select id="package" name="package">
+            <option value="">— Select a Package —</option>
+            <option value="Basic — ₹45,000">Basic — ₹45,000</option>
+            <option value="Standard — ₹55,000">Standard — ₹55,000</option>
+            <option value="Premium — ₹85,000">Premium — ₹85,000</option>
+            <option value="Premium Plus — ₹1,10,000">Premium Plus — ₹1,10,000</option>
+            <option value="Custom Requirement">Custom Requirement</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field full">
+          <div class="form-checks-label">Additional Services</div>
+          <div class="form-checks-grid">
+            <label class="form-check"><input type="checkbox" name="addons" value="LED Wall"><span>LED Wall</span></label>
+            <label class="form-check"><input type="checkbox" name="addons" value="Helicam"><span>Helicam</span></label>
+            <label class="form-check"><input type="checkbox" name="addons" value="Live Streaming"><span>Live Streaming</span></label>
+            <label class="form-check"><input type="checkbox" name="addons" value="Spot Editing"><span>Spot Editing</span></label>
+            <label class="form-check"><input type="checkbox" name="addons" value="Live Photo Printing"><span>Live Photo Printing</span></label>
+            <label class="form-check"><input type="checkbox" name="addons" value="AI QR Photo Download"><span>AI QR Photo Download</span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="3" placeholder="Tell us about your wedding..."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="form-submit" data-cursor="hover">Send Enquiry</button>
+      <div class="form-success" id="formSuccess">
+        <i class="fas fa-check-circle"></i> Thank you. Your enquiry has been received. We'll be in touch shortly.
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo" data-cursor="hover">
+        <div class="nav-logo-flower">
+          <svg viewBox="0 0 100 100" fill="none">
+            <g stroke="#b8956a" stroke-width="2">
+              <ellipse cx="50" cy="30" rx="8" ry="18"/>
+              <ellipse cx="50" cy="70" rx="8" ry="18"/>
+              <ellipse cx="30" cy="50" rx="18" ry="8"/>
+              <ellipse cx="70" cy="50" rx="18" ry="8"/>
+              <ellipse cx="36" cy="36" rx="14" ry="6" transform="rotate(-45 36 36)"/>
+              <ellipse cx="64" cy="36" rx="14" ry="6" transform="rotate(45 64 36)"/>
+              <ellipse cx="36" cy="64" rx="14" ry="6" transform="rotate(45 36 64)"/>
+              <ellipse cx="64" cy="64" rx="14" ry="6" transform="rotate(-45 64 64)"/>
+              <circle cx="50" cy="50" r="6" fill="#b8956a"/>
+            </g>
+          </svg>
+        </div>
+        <div class="nav-logo-text">
+          <span class="name">Velora</span>
+          <span class="tag">Wedfilms</span>
+        </div>
+      </a>
+      <p class="quote">Make Your Moment Memorable.</p>
+      <div class="social">
+        <a href="https://instagram.com/Velora_wedfilms" target="_blank" rel="noopener" aria-label="Instagram" data-cursor="hover"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/917907891427" target="_blank" rel="noopener" aria-label="WhatsApp" data-cursor="hover"><i class="fab fa-whatsapp"></i></a>
+        <a href="tel:+917907891427" aria-label="Phone" data-cursor="hover"><i class="fas fa-phone"></i></a>
+        <a href="mailto:Velorawedfilms@gmail.com" aria-label="Email" data-cursor="hover"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#home" data-cursor="hover">Home</a></li>
+        <li><a href="#about" data-cursor="hover">About</a></li>
+        <li><a href="#services" data-cursor="hover">Services</a></li>
+        <li><a href="#packages" data-cursor="hover">Packages</a></li>
+        <li><a href="#portfolio" data-cursor="hover">Portfolio</a></li>
+        <li><a href="#contact" data-cursor="hover">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>
+        <strong>Phone</strong>
+        <a href="tel:+917907891427" style="color:inherit;text-decoration:none">+91 79078 91427</a>
+      </p>
+      <p>
+        <strong>Email</strong>
+        <a href="mailto:Velorawedfilms@gmail.com" style="color:inherit;text-decoration:none">Velorawedfilms@gmail.com</a>
+      </p>
+      <p>
+        <strong>Instagram</strong>
+        <a href="https://instagram.com/Velora_wedfilms" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">@Velora_wedfilms</a>
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Location</h4>
+      <p>
+        <strong>Studio</strong>
+        Trivandrum, Kerala, India
+      </p>
+      <p>
+        <strong>Service Area</strong>
+        Kerala • Tamil Nadu<br>
+        <em style="color:var(--champagne);font-family:'Cormorant Garamond',serif">Coming Soon: All India</em>
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Velora Wedfilms. All Rights Reserved.</div>
+    <div class="credit">Make Your Moment Memorable.</div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING ACTIONS ===== -->
+<div class="floating-actions">
+  <a href="https://wa.me/917907891427?text=Hi%20Velora%20Wedfilms" target="_blank" rel="noopener" class="floating-btn whatsapp" aria-label="WhatsApp" data-cursor="hover">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+917907891427" class="floating-btn call" aria-label="Call" data-cursor="hover">
+    <i class="fas fa-phone"></i>
+  </a>
+</div>
+
+<!-- ===== TOAST ===== -->
+<div class="toast" id="toast">
+  <i class="fas fa-check-circle"></i>
+  <span id="toastText">Package selected</span>
+</div>
+
+<script>
+// ============== LOADER ==============
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hidden');
+    document.body.style.overflow = 'auto';
+  }, 2600);
+});
+document.body.style.overflow = 'hidden';
+
+// ============== NAVBAR SCROLL ==============
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// ============== MOBILE MENU ==============
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+});
+document.querySelectorAll('[data-mobile-link]').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+});
+
+// ============== SMOOTH SCROLL ==============
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href');
+    if (targetId === '#' || targetId.length <= 1) return;
+    const target = document.querySelector(targetId);
+    if (target) {
+      e.preventDefault();
+      const offset = 60;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+// ============== REVEAL ON SCROLL ==============
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal, .reveal-img').forEach(el => observer.observe(el));
+
+// ============== CUSTOM CURSOR ==============
+const cursorDot = document.getElementById('cursorDot');
+const cursorRing = document.getElementById('cursorRing');
+let mouseX = 0, mouseY = 0;
+let ringX = 0, ringY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursorDot.style.left = mouseX + 'px';
+  cursorDot.style.top = mouseY + 'px';
+});
+
+function animateRing() {
+  ringX += (mouseX - ringX) * 0.15;
+  ringY += (mouseY - ringY) * 0.15;
+  cursorRing.style.left = ringX + 'px';
+  cursorRing.style.top = ringY + 'px';
+  requestAnimationFrame(animateRing);
+}
+animateRing();
+
+document.querySelectorAll('[data-cursor="hover"]').forEach(el => {
+  el.addEventListener('mouseenter', () => cursorRing.classList.add('hovering'));
+  el.addEventListener('mouseleave', () => cursorRing.classList.remove('hovering'));
+});
+
+// ============== PACKAGE SELECTION ==============
+const packageButtons = document.querySelectorAll('[data-package]');
+const selectedPkgDisplay = document.getElementById('selectedPkgDisplay');
+const selectedPkgValue = document.getElementById('selectedPkgValue');
+const packageSelect = document.getElementById('package');
+const clearPkgBtn = document.getElementById('clearPkg');
+const toast = document.getElementById('toast');
+const toastText = document.getElementById('toastText');
+
+function showToast(message) {
+  toastText.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2800);
+}
+
+function selectPackage(pkgName) {
+  // Find matching option
+  let matched = false;
+  for (let i = 0; i < packageSelect.options.length; i++) {
+    if (packageSelect.options[i].value === pkgName) {
+      packageSelect.selectedIndex = i;
+      matched = true;
+      break;
+    }
+  }
+  if (!matched) {
+    // Add custom option
+    const opt = document.createElement('option');
+    opt.value = pkgName;
+    opt.text = pkgName;
+    packageSelect.appendChild(opt);
+    packageSelect.value = pkgName;
+  }
+  
+  selectedPkgValue.textContent = pkgName;
+  selectedPkgDisplay.classList.add('show');
+  showToast(`Selected: ${pkgName}`);
+}
+
+packageButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const pkg = btn.getAttribute('data-package');
+    selectPackage(pkg);
+    
+    // Smooth scroll to contact
+    const target = document.getElementById('contact');
+    const offset = 60;
+    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+    
+    // Focus name field after scroll
+    setTimeout(() => {
+      document.getElementById('name').focus({ preventScroll: true });
+    }, 1000);
+  });
+});
+
+clearPkgBtn.addEventListener('click', () => {
+  packageSelect.selectedIndex = 0;
+  selectedPkgDisplay.classList.remove('show');
+  selectedPkgValue.textContent = '—';
+});
+
+// ============== FORM SUBMIT ==============
+document.getElementById('enquiryForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const success = document.getElementById('formSuccess');
+  success.classList.add('show');
+  showToast('Enquiry sent successfully');
+  
+  // Build WhatsApp message
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const email = document.getElementById('email').value;
+  const date = document.getElementById('date').value;
+  const location = document.getElementById('location').value;
+  const pkg = document.getElementById('package').value;
+  const addons = Array.from(document.querySelectorAll('input[name="addons"]:checked')).map(c => c.value).join(', ');
+  const message = document.getElementById('message').value;
+  
+  const waMessage = `*New Wedding Enquiry — Velora Wedfilms*%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Email:* ${email}%0A*Date:* ${date}%0A*Location:* ${location}%0A*Package:* ${pkg}%0A*Add-ons:* ${addons}%0A*Message:* ${message}`;
+  
+  setTimeout(() => {
+    success.classList.remove('show');
+    // Optionally open WhatsApp
+    // window.open(`https://wa.me/917907891427?text=${waMessage}`, '_blank');
+  }, 4000);
+  
+  // Reset form after delay
+  setTimeout(() => {
+    e.target.reset();
+    selectedPkgDisplay.classList.remove('show');
+    selectedPkgValue.textContent = '—';
+  }, 4500);
+});
+
+// ============== PARALLAX EFFECT ==============
+const heroBg = document.querySelector('.hero-bg img');
+const coupleBg = document.querySelector('.couple-feature-bg img');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  if (heroBg && scrolled < window.innerHeight) {
+    heroBg.style.transform = `scale(1) translateY(${scrolled * 0.3}px)`;
+  }
+  if (coupleBg) {
+    const rect = coupleBg.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      const offset = (window.innerHeight - rect.top) * 0.1;
+      coupleBg.style.transform = `scale(1.05) translateY(${offset}px)`;
+    }
+  }
+});
+
+// ============== PREVENT IMAGE DRAG ==============
+document.querySelectorAll('img').forEach(img => {
+  img.addEventListener('dragstart', e => e.preventDefault());
+});
+</script>
+
+</body>
+</html>
